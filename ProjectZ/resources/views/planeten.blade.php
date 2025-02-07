@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    @if (session('error'))
+            <script defer>alert('{{ session('error') }}')</script>
+    @endif
     <div class="container">
         <div class="wrapper">
             <div class="titel">
@@ -16,7 +19,6 @@
                 <span>kies een planeet</span>
             </div>
             <div class="planets">
-                
                 @foreach ($planeten as $planeet)
                     <div class="box">
                         <a href="/planeten/{{ $planeet->name }}">{{ $planeet->name }}</a>
