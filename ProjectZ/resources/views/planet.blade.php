@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ request('planet') }}</title> <!--  Dynamische titel COOOOL :D  -->
+    <title>{{ $planeet->name }}</title>
     <link rel="stylesheet" href="/styles/planet.css">
 </head>
 
 <body>
-    <div class="containerd">
-        <article>
-            @foreach ($planeten as $planet)
-                <h1 class="titel"> {{ $planet['name'] }} </h1>
-                <p> {{ $planet['description']}} </p>
-            @endforeach
-        </article>
-        <a href="/planeten"><button class="knop">Go back</button></a>
+    <div class="single">
+        <div class="sWrap">
+            <article>
+                <h1>{{ $planeet->name }}</h1>
+                <span>grotte in km: {{ $planeet->size_in_km}}</span>
+                <p>{{ $planeet->description }}</p>
+
+            </article>
+            <a href="/planeten">
+                <button>terug naar planeten</button>
+            </a>
+        </div>
     </div>
+
 </body>
 
 </html>
