@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Planeten;
+use App\Models\Planet;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +18,7 @@ class PlanetenController extends Controller
     // alle planeten weergeven met index 
     public function index()
     {
-        $planeten = DB::table('planets')->get();
+        $planeten = Planet::all();
         return view('planeten')->with(['planeten' => $planeten]);
     }
 
@@ -26,7 +26,7 @@ class PlanetenController extends Controller
     // individueel planeet weergeven
     public function show(string $planeet)
     {
-        $voorkeur = DB::table('planets')->where('name', $planeet)->first();
+        $voorkeur = Planet::where('name', $planeet)->first();
 
         # als planeet niet bestaat geef error terug (extra)
         if (!$voorkeur) {
@@ -36,6 +36,7 @@ class PlanetenController extends Controller
 
         # opgehaalde infromatie van planeet doorgeven aan view
         return view('/planet', ['planeet' => $voorkeur]);
+
     }
 
 
@@ -43,7 +44,7 @@ class PlanetenController extends Controller
     // planeten selecteren (voor seeders overzicht)
     public function getPlanets()
     {
-        $planeten = DB::table('planets')->get();
+        $planeten = Planet::all();
         return $planeten;
     }
 }

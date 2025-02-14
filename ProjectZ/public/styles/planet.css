@@ -49,6 +49,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .box {
