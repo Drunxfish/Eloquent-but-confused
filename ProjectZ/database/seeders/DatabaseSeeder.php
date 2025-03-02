@@ -14,13 +14,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
         
+        // Eerste Solar systeem laten runnen om foreign key conflicten te voorkomen
         $this->call([
+            SolarSystemSeeder::class,
             PlanetsTableSeeder::class,
         ]);
     }

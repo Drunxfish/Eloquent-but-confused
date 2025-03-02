@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+// use Dom\Comment;
+// use Illuminate\Http\Request;
 use App\Models\Planet;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Facades\DB;
+// use Illuminate\Support\Facades\View;
+// use Illuminate\Support\Facades\DB;
 
 
 
@@ -15,36 +16,47 @@ class PlanetenController extends Controller
     //-----------------------------------|
     // Opdracht: schrijf je eerste query |
     //-----------------------------------|
-    // alle planeten weergeven met index 
+    // Haalt en geeft alle planeten door van de DB
     public function index()
     {
-        $planeten = Planet::all();
-        return view('planeten')->with(['planeten' => $planeten]);
+        // Retourneert planeet en solar system gegevens
+        return view('planeten')->with(['planeten' => Planet::with('solarSystem')->get()]);
     }
 
 
-    // individueel planeet weergeven
+    // Haalt gegevens op en geeft het door aan een view voor één planeet
     public function show(string $planeet)
     {
-        $voorkeur = Planet::where('name', $planeet)->first();
 
-        # als planeet niet bestaat geef error terug (extra)
+        // Haalt gegevens van planeet/solarSysteem
+        $voorkeur = Planet::with('solarSystem')->where("name", $planeet)->first();
+
+        # Als planeet niet bestaat geef error terug (extra)
         if (!$voorkeur) {
             return redirect('/planeten')->with('error', 'planeet niet gevonden');
         }
 
 
-        # opgehaalde infromatie van planeet doorgeven aan view
+        # Opgehaalde infromatie van planeet doorgeven aan view
         return view('/planet', ['planeet' => $voorkeur]);
 
     }
 
 
 
-    // planeten selecteren (voor seeders overzicht)
+
+
+
+
+
+
+
+    // Planeten selecteren (voor seeders overzicht)
     public function getPlanets()
     {
-        $planeten = Planet::all();
+        // retourneert alle planeten die relatie hebben met solar systeeem
+        $planeten = Planet::with("solarSystem")->get();
+
         return $planeten;
     }
 }

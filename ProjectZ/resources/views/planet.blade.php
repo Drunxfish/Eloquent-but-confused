@@ -14,6 +14,7 @@
             <article>
                 <h1>{{ $planeet->name }}</h1>
                 <span>grotte in km: {{ $planeet->size_in_km}}</span>
+                <span>Solar Systeem: {{ $planeet->SolarSystem->name }}</span>
                 <p>{{ $planeet->description }}</p>
 
             </article>

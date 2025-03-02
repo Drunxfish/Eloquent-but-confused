@@ -4,18 +4,17 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
+
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('planets', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('solar_systems', function (Blueprint $table) {
+            $table->id('id');
             $table->string('name')->index();
-            $table->string('description');
-            $table->integer('size_in_km');
+            $table->string('age_in_years');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('planets');
+        Schema::dropIfExists('solar_systems');
     }
 };
