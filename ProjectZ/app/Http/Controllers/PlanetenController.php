@@ -56,7 +56,6 @@ class PlanetenController extends Controller
     {
         // retourneert alle planeten die relatie hebben met solar systeeem
         $planeten = Planet::with("solarSystem")->get();
-
         return $planeten;
     }
 }
