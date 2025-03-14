@@ -24,6 +24,7 @@
         </div>
     </div>
 
+    <script src="/javaScript/container.js"></script>
 </body>
 
 </html>
