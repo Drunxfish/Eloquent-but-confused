@@ -7,11 +7,13 @@ use Illuminate\Http\Request;
 
 class SubjectController extends Controller
 {
+    
+    // Geeft alle vakken terug
     public function index()
     {
-        //
+        return Subject::all();
     }
-    public function show(Subject $subject)
+    public function show()
     {
         //
     }

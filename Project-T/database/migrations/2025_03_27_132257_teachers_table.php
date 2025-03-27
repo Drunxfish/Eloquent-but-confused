@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
-            $table->timestamp('entry_date');
+            $table->date('entry_date')->default(DB::raw('CURRENT_DATE'));
             $table->timestamps();
         });
     }

@@ -9,6 +9,8 @@ use Illuminate\Database\Seeder;
 class subjectTableSeeder extends Seeder
 {
 
+
+    // Dummy data voor docenten vakken
     public function run(): void
     {
         Subject::insert([

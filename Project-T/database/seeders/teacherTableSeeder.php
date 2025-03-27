@@ -8,6 +8,8 @@ use Illuminate\Database\Seeder;
 
 class teacherTableSeeder extends Seeder
 {
+
+    // Dummy data voor docenten
     public function run(): void
     {
         Teacher::insert([
