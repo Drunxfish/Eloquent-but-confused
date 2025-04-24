@@ -5,7 +5,7 @@
 🚀 A collection of Laravel projects where I apply and experiment with what I learn.  
 I'll be adding more features and improvements as I continue exploring Laravel! 😏 
 
-📑 *Course assignments were designed by Professor Mark de Rooij*  
+📑 *Some of the Course assignments were designed by Professor Mark de Rooij*  
 
 ---
 ## 🔧 Topics Covered  
