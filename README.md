@@ -1,7 +1,5 @@
 # 🏗️ Laravel Projects 🏗️  
 
-## 🎯 Laravel Framework Projects  
-
 🚀 A collection of Laravel projects where I apply and experiment with what I learn.  
 I'll be adding more features and improvements as I continue exploring Laravel! 😏 
 
