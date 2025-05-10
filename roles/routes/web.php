@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserRoleController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+// Display User/Roles
+Route::get('/user/{id}/roles', [UserRoleController::class, 'showUserRoles']);
