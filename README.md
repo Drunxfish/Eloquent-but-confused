@@ -1,9 +1,9 @@
-# 🏗️ Laravel Course Projects/Assignments 🏗️  
+## 🏗️ Laravel Course Assignments
 
-🚀 A collection of Laravel projects where I apply and experiment with what I learn.  
-I'll be adding more features and improvements as I continue exploring Laravel! 😏 
+🚀 A collection of assignments completed as part of my Laravel course.  
+Each project reflects concepts I've learned and applied — with more enhancements to come as I dive deeper into Laravel! 😏
 
-📑 *Course assignments were designed by Professor Mark de Rooij*  
+📑 *Course assignments designed by Professor Mark de Rooij*
 
 ---
 ## 🔧 Topics Covered  
