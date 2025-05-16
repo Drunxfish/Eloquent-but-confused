@@ -16,7 +16,7 @@ Each project reflects concepts I've learned and applied — with more enhancemen
 
 🔜 Queues & Jobs  
 🔜 Testing & Debugging  
-🔜 API Development (RESTful & JSON)  
+✅ API Development (RESTful & JSON)  
 🔜 Authentication & Authorization  
 
 ---  
